@@ -1,16 +1,16 @@
 import Image from "next/image";
-import Landing from "./pages/Landing";
-import About from "./pages/About";
-import Services from "./pages/Services";
-import Location from "./pages/Location";
+import About from "./pages/about";
+import Services from "./pages/services";
+import Location from "./pages/location";
+import Index from "./pages";
 
 export default function Home() {
   return (
     <main>
-      <Landing />
+      <Index />
       <About />
-      <Services />
-      <Location />
+      {/* <Services /> */}
+      {/* <Location /> */}
     </main>
   );
 }

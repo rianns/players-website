@@ -1,8 +1,23 @@
+import { gloock } from "@/app/fonts";
 import styled from "styled-components";
 
 export interface NavProps {
   className?: string;
 }
+
+export const NavList = styled.ul`
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 2.25rem;
+`;
+
+export const NavItem = styled.li`
+  font-size: 2rem;
+  color: white;
+  font-family: ${gloock.style.fontFamily};
+`;
 
 const NavContainer = styled.div`
   position: fixed;
@@ -10,15 +25,7 @@ const NavContainer = styled.div`
   left: 0;
   width: 100%;
   background-color: "transparent";
-  transition: background-color 0.3s ease-in-out;
   z-index: 1000;
-
-  &.shrunken {
-    height: 50px;
-    padding 10px;
-  }
-
-  ${({ className }) => className && `.${className} {}`}
 `;
 
 export default NavContainer;

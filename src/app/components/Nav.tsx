@@ -1,10 +1,10 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
-import NavContainer, { NavProps } from "../resources/styles/NavContainer";
-
-interface NavState {
-  isShrunk: boolean;
-}
+import NavContainer, {
+  NavItem,
+  NavList,
+  NavProps,
+} from "../resources/styles/NavContainer";
 
 const Nav: React.FC<NavProps> = ({ className }) => {
   const [isShrunk, setIsShrunk] = useState<boolean>(false);
@@ -31,16 +31,17 @@ const Nav: React.FC<NavProps> = ({ className }) => {
     };
   }, [navRef]);
 
+  // TODO: background show up when scrolled (useState?)
+
   return (
-    <NavContainer ref={navRef} className={className} isShrunk={isShrunk}>
-      <div>
-        <ul className="flex flex-row justify-evenly p-5 font-nav">
-          <li>Home</li>
-          <li>About</li>
-          <li>Services</li>
-          <li>Location</li>
-        </ul>
-      </div>
+    <NavContainer>
+      <NavList>
+        <NavItem>Home</NavItem>
+        <NavItem>About</NavItem>
+        {/* small logo hidden initially, reveals on scroll down */}
+        <NavItem>Services</NavItem>
+        <NavItem>Location</NavItem>
+      </NavList>
     </NavContainer>
   );
 };
