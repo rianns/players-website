@@ -8,32 +8,85 @@ export const NAV_LINKS = [
 
 // ABOUT SECTION
 export const BARBERS = [
-  {name: 'Gilbert', background: ''},
-  {name: 'Leonel', background: ''},
-  {name: 'Peter', background: ''},
-  {name: 'Archie', background: ''},
-  {name: '##', background: ''},
-  {name: '##', background: ''},
+  {key: 'gilbert', name: 'Gilbert', image: '', background: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'},
+  {key: 'noynoy', name: 'Leonel', image: '', background: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'},
+  {key: 'pedro', name: 'Peter', image: '', background: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'},
+  {key: 'archie', name: 'Archie', image: '', background: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'},
+  {key: 'mario', name: 'Mario', image: '', background: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'},
+  {key: '', name: '##', image: '', background: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'},
+  {key: '', name: '##', image: '', background: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'},
 ]
 
 // SERVICES SECTION
 export const SERVICES = [
   {
     title: 'Regular',
-    icon: '',
-    variant: 'reg',
-    description: '',
+    key: 'reg',
+    cuts: [
+      {
+        'name': 'Hair Cut',
+        price: 35,
+      },
+      {
+        'name': 'Zero Fade',
+        price: 40,
+      },
+      {
+        'name': 'Skin Fade',
+        price: 48,
+      },
+      {
+        'name': 'Beard Trim',
+        price: 32,
+      },
+      {
+        'name': 'Flat Top',
+        price: 38,
+      },
+      {
+        'name': 'Zero Flat Top',
+        price: 45,
+      },
+      {
+        'name': 'Skin Flat Top',
+        price: 48,
+      },
+      {
+        'name': 'Buzz Cut',
+        price: 25,
+      }
+    ],
   },
   {
     title: 'High School',
-    icon: '',
-    variant: 'hs',
-    description: '',
+    key: 'hs',
+    cuts: [
+      {
+        'name': 'Hair Cut',
+        price: 28,
+      },
+      {
+        'name': 'Zero Fade',
+        price: 38,
+      },
+      {
+        'name': 'Skin Fade',
+        price: 42,
+      }
+    ],
   },
   {
     title: 'Boys',
-    icon: '',
-    variant: 'kids',
-    description: '',
+    key: 'kids',
+    cuts: [
+      {
+        'name': 'Hair Cut',
+        price: 26,
+      },
+      {
+        'name': 'Zero Fade',
+        price: 35,
+      }
+    ],
   },
 ]

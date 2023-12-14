@@ -12,10 +12,24 @@
 
 body {
   font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
 }
 
+nav {
+  @apply fixed w-full h-24;
+  z-index: 1000;
+  top: 0;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+main {
+  @apply mt-24;
+}
+
+
+
 @layer utilities {
-  .max_container {
+  .max-container {
     @apply mx-auto max-w-[1440px];
   }
   .padding-container {
@@ -37,24 +51,67 @@ body {
     @apply flex items-center justify-end;
   }
   
-  /* FONTS */
+  /* Navigation */
+  .navbar {
+    @apply bg-dark  text-white;
+  }
+
+  .navbar-home {
+    @apply bg-transparent mt-36;
+    box-shadow: none;
+  }
 
   .navlinks {
     font-family: 'Gloock', serif;
     font-size: 2rem;
+    /* text-transform: uppercase; */
   }
 
   .navlinks:hover {
     font-weight: bolder;
   }
 
+  /* Footer */
+
+  .footer {
+    @apply bg-dark h-24 w-screen;
+    position: fixed;
+    bottom: 0;
+  }
+
   /* Landing Page */
+  .landing {
+    @apply w-full bg-cover;
+    background-image: url('/resources/images/bg-landing1.png');
+    height: calc(100vh - 9rem);
+    margin-top: -9rem;
+  }
 
   /* About */
+  .about-desc-container {
+    @apply p-16 bg-dark50 mx-80 my-16 max-w-3xl rounded-lg;
+  }
+
+  .about-bg {
+    @apply bg-cover my-16;
+    background-image: url('/resources/images/bg-about1.png');
+  }
+
+  .about {
+    @apply flex flex-col pt-20;
+  }
+
 
   /* Services */
+  .services {
+    @apply m-auto border border-red-500;
+  }
 
   /* Location */
+
+  .location {
+
+  }
 
 
   /* Hide Scrollbar for Chrome, Safari and Opera */

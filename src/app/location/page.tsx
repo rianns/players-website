@@ -1,4 +1,8 @@
 const Location = () => {
-  return <div>Location</div>;
+  return (
+    <section className="location">
+      <div>Location</div>
+    </section>
+  );
 };
 export default Location;

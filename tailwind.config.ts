@@ -12,8 +12,8 @@ const config: Config = {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-        'about-bg': "url('./../resources/images/AdobeStock_244057912.jpeg')",
-        'landing': "url('./../resources/images/AdobeStock_218284763.jpeg')"
+        // 'about-bg': "url('../../public/resources/images/bg-about.png')",
+        // 'landing': "url('/resources/images/AdobeStock_218284763.jpeg')"
       },
       // fontFamily: {
       //   title: ['var(--font-comforter)'],
@@ -22,6 +22,7 @@ const config: Config = {
       // },
       colors: {
         dark: '#404040',
+        dark50: 'rgba(64, 64, 64, 0.5)',
       },
       screens: {
         xs: '400px',

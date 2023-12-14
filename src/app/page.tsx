@@ -1,5 +1,11 @@
+import LandingLogo from "@/components/LandingLogo";
+import Button from "@/components/styles/Button";
 import Image from "next/image";
 
 export default function Home() {
-  return <div>hello</div>;
+  return (
+    <div className={`landing flexCenter`}>
+      <LandingLogo />
+    </div>
+  );
 }

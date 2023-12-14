@@ -1,15 +1,16 @@
+"use client";
 import Image from "next/image";
-import playersLogo from "../resources/images/players-logo.png";
+import playersLogo from "../../public/resources/images/players-logo.png";
+import Button from "./styles/Button";
 
 const LandingLogo = () => {
   return (
-    <div className="flex justify-center items-center pt-32 pb-20">
+    <div>
       <Image
         src={playersLogo}
         alt={""}
-        width={480}
+        width={560}
         // height={683}
-        className="border border-white"
       />
     </div>
   );
