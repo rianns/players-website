@@ -39,3 +39,4 @@ Still need to do:
 2. location - all, look at google maps embed
 3. ANIMATIONS
 4. SEO optimisations, image file size too large atm
+5. favicon (design needed)
