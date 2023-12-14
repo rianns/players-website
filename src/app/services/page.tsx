@@ -1,4 +1,4 @@
-import Paper from "../resources/styles/Paper";
+import Paper from "@/resources/styles/Paper";
 
 const Services = () => {
   return <Paper>Hello</Paper>;

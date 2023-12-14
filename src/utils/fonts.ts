@@ -1,4 +1,4 @@
-import { Comforter, Montserrat, Gloock } from "@next/font/google";
+import { Comforter, Montserrat, Gloock } from "next/font/google";
 
 export const comforter = Comforter({
   weight: "400",

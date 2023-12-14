@@ -12,16 +12,27 @@ const config: Config = {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-        'about-bg': "url('./resources/images/AdobeStock_244057912.jpeg')",
-        'landing': "url('./resources/images/AdobeStock_218284763.jpeg')"
+        'about-bg': "url('./../resources/images/AdobeStock_244057912.jpeg')",
+        'landing': "url('./../resources/images/AdobeStock_218284763.jpeg')"
       },
-      fontFamily: {
-        title: ['var(--font-comforter)'],
-        nav: ['var(--font-gloock)'],
-        text: ['var(--font-montserrat)'],
-      },
+      // fontFamily: {
+      //   title: ['var(--font-comforter)'],
+      //   nav: ['var(--font-gloock)'],
+      //   text: ['var(--font-montserrat)'],
+      // },
       colors: {
         dark: '#404040',
+      },
+      screens: {
+        xs: '400px',
+        '3x1': '1680px',
+        '4x1': '2200px',
+      },
+      maxWidth: {
+        '10x1': '1512px',
+      },
+      borderRadius: {
+        '5x1': '40px',
       },
     },
   },

@@ -1,9 +1,11 @@
+import Nav from "@/components/Nav";
 import "./globals.css";
 import type { Metadata } from "next";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Players Men's Hairstylists",
-  description: "Players Baldivis",
+  description: "Players Men's Hairstylists Baldivis Stockland",
 };
 
 export default function RootLayout({
@@ -13,7 +15,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <Nav />
+        <main>{children}</main>
+        <Footer />
+      </body>
     </html>
   );
 }

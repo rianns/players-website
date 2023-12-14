@@ -1,4 +1,4 @@
-import { comforter, gloock, montserrat } from "@/app/fonts";
+import { comforter, gloock, montserrat } from "@/utils/fonts";
 import { styled } from "styled-components";
 
 const Title = styled.h1`

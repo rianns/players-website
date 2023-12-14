@@ -1,32 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Comforter&family=Gloock&family=Montserrat:wght@200;400&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-h1 {
-  font-family: var(--font-comforter);
-}
-
-/* :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-} */
+  font-family: 'Montserrat', sans-serif;
+}
 
+@layer utilities {
+  .max_container {
+    @apply mx-auto max-w-[1440px];
+  }
+  .padding-container {
+    @apply px-6 lg:px-20 3x1:px-0;
+  }
+  .flexCenter {
+    @apply flex items-center justify-center;
+  }
+  .flexBetween {
+    @apply flex items-center justify-between;
+  }
+  .flexEven {
+    @apply flex items-center justify-evenly;
+  }
+  .flexStart {
+    @apply flex items-center justify-start;
+  }
+  .flexEnd {
+    @apply flex items-center justify-end;
+  }
+  
+  /* FONTS */
+
+  .navlinks {
+    font-family: 'Gloock', serif;
+    font-size: 2rem;
+  }
+
+  .navlinks:hover {
+    font-weight: bolder;
+  }
+
+  /* Landing Page */
+
+  /* About */
+
+  /* Services */
+
+  /* Location */
+
+
+  /* Hide Scrollbar for Chrome, Safari and Opera */
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide Scrollbar for IE, Edge, and Firefox */
+  .hide-scrollbar {
+    -ms-overflow-style: none; 
+    scrollbar-width: none;
+  }
+}
