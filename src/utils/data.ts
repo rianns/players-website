@@ -90,3 +90,43 @@ export const SERVICES = [
     ],
   },
 ]
+
+// LOCATIONS - Opening hours
+
+export const OPENINGS = [
+  {
+    title: "Opening Hours",
+    hours: [
+      {
+      day: "Monday",
+      time: "9am - 5pm",
+      },
+      {
+        day: "Tuesday",
+        time: "9am - 5pm",
+      },
+      {
+        day: "Wednesday",
+        time: "9am - 5pm",
+      },
+      {
+        day: "Thursday",
+        time: "9am - 5pm",
+      },
+      {
+        day: "Friday",
+        time: "9am - 5pm",
+      },
+      {
+        day: "Saturday",
+        time: "9am - 5pm",
+      },
+      
+      {
+        day: "Sunday",
+        time: "CLOSED",
+      },
+  ]
+  }
+]
+

@@ -1,33 +1,22 @@
+"use client";
 import React from "react";
 import Paper from "./styles/Paper";
+import Prices from "./Prices";
+import PricesContainer, { PricesWrapper } from "./styles/StyledPrices";
 
-type ServiceProps<T extends CutsTypes> = {
-  title: string;
-  cuts: T[];
-};
-
-type CutsTypes = {
+export type CutsType = {
   name: string;
   price: number;
 };
 
-const Service = ({ title, cuts }: ServiceProps<CutsTypes>) => {
+const Service = ({ cuts }: { cuts: CutsType[] }) => {
   return (
-    <div>
-      <Paper>{title}</Paper>
-      <div>
-        {cuts.map((cut) => {
-          return (
-            <div key={cut.name}>
-              {cut.name}
-              {cut.price}
-            </div>
-          );
-        })}
-      </div>
-
-      {/* depending on what the title is, hide the rest */}
-    </div>
+    <PricesContainer>
+      <PricesWrapper>
+        <Prices cuts={cuts} />
+        {/* depending on what the title is, hide the rest */}
+      </PricesWrapper>
+    </PricesContainer>
   );
 };
 

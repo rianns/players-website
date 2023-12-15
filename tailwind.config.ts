@@ -23,6 +23,7 @@ const config: Config = {
       colors: {
         dark: '#404040',
         dark50: 'rgba(64, 64, 64, 0.5)',
+        maroon: '#943d42',
       },
       screens: {
         xs: '400px',

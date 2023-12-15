@@ -10,54 +10,32 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 400;
-}
-
-nav {
-  @apply fixed w-full h-24;
-  z-index: 1000;
-  top: 0;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-main {
-  @apply mt-24;
-}
-
-
-
-@layer utilities {
-  .max-container {
-    @apply mx-auto max-w-[1440px];
-  }
-  .padding-container {
-    @apply px-6 lg:px-20 3x1:px-0;
-  }
-  .flexCenter {
-    @apply flex items-center justify-center;
-  }
-  .flexBetween {
-    @apply flex items-center justify-between;
-  }
-  .flexEven {
-    @apply flex items-center justify-evenly;
-  }
-  .flexStart {
-    @apply flex items-center justify-start;
-  }
-  .flexEnd {
-    @apply flex items-center justify-end;
+@layer base {
+  body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
   }
   
+  nav {
+    @apply fixed w-full h-24;
+    z-index: 1000;
+    top: 0;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  main {
+    @apply mt-24;
+  }
+}
+
+@layer components {
   /* Navigation */
   .navbar {
     @apply bg-dark  text-white;
   }
 
   .navbar-home {
-    @apply bg-transparent mt-36;
+    @apply bg-transparent mt-36 text-white;
     box-shadow: none;
   }
 
@@ -98,21 +76,71 @@ main {
   }
 
   .about {
-    @apply flex flex-col pt-20;
+    @apply flex flex-col py-24;
   }
 
 
   /* Services */
   .services {
-    @apply m-auto border border-red-500;
+    @apply m-auto p-24  w-5/6;
+  }
+
+  .services-headers {
+    @apply max-w-4xl flexBetween flex-row w-4/5 gap-5;
+  }
+
+  .services-prices {
+    @apply max-w-4xl w-4/5 py-8 text-xl grid grid-cols-1 gap-5;
   }
 
   /* Location */
 
   .location {
-
+    @apply m-auto p-24  w-5/6 border border-red-500 flex flex-row;
+    height: calc(100vh - 24rem);
   }
 
+  .location-hours {
+    @apply h-full w-1/2 p-24 border border-blue-500;
+  }
+
+  .location-hours-in {
+    @apply px-12 pr-40 text-3xl font-light;
+  }
+
+  .location-map {
+    @apply h-full w-1/2 border border-green-500;
+  }
+}
+
+@layer utilities {
+  .max-container {
+    @apply mx-auto max-w-[1440px];
+  }
+  .padding-container {
+    @apply px-6 lg:px-20 3x1:px-0;
+  }
+  .flexCenter {
+    @apply flex items-center justify-center;
+  }
+  .flexBetween {
+    @apply flex items-center justify-between;
+  }
+  .flexEven {
+    @apply flex items-center justify-evenly;
+  }
+  .flexStart {
+    @apply flex items-center justify-start;
+  }
+  .flexEnd {
+    @apply flex items-center justify-end;
+  }
+  
+  /* DEV BORDER */
+
+  .devBorder {
+    @apply border border-red-500;
+  }
 
   /* Hide Scrollbar for Chrome, Safari and Opera */
   .hide-scrollbar::-webkit-scrollbar {

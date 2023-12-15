@@ -7,4 +7,8 @@ const Title = styled.h1`
   font-family: ${comforter.style.fontFamily};
 `;
 
+export const TitleVar = styled(Title)`
+  text-align: left;
+`;
+
 export default Title;
