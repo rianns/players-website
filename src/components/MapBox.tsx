@@ -1,5 +1,5 @@
 import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
-import React, { useEffect, useRef } from "react";
+import React, { forwardRef, useEffect, useRef, useState } from "react";
 
 const libraries = ["places"];
 const mapContainerStyle = {
@@ -21,13 +21,16 @@ const MapBox = () => {
   const mapRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const script = document.createElement("script");
-    script.src = `https://maps.googleapis.com/maps/api/js?key=${
-      process.env.REACT_APP_GOOGLE_MAPS_API_KEY
-    }&libraries=${libraries.join(",")}`;
-    script.async = true;
-    script.onerror = () => console.error("Google Maps script failed to load.");
-    document.body.appendChild(script);
+    if (mapRef.current) {
+      const script = document.createElement("script");
+      script.src = `https://maps.googleapis.com/maps/api/js?key=${
+        process.env.REACT_APP_GOOGLE_MAPS_API_KEY
+      }&libraries=${libraries.join(",")}`;
+      script.async = true;
+      script.onerror = () =>
+        console.error("Google Maps script failed to load.");
+      document.body.appendChild(script);
+    }
   }, []);
 
   return (
