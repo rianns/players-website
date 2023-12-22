@@ -67,7 +67,7 @@
 
   /* About */
   .about-desc-container {
-    @apply p-16 bg-dark50 mx-80 my-16 max-w-3xl rounded-lg;
+    @apply p-16 bg-dark50 my-16 max-w-4xl rounded-lg;
   }
 
   .about-bg {

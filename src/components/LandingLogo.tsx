@@ -5,7 +5,7 @@ import Button from "./styles/Button";
 
 const LandingLogo = () => {
   return (
-    <div>
+    <div className="mt-36">
       <Image
         src={playersLogo}
         alt={""}

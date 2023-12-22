@@ -1,5 +1,6 @@
 "use client";
 import Hours from "@/components/Hours";
+import MapBox from "@/components/MapBox";
 import Title, { TitleVar } from "@/components/styles/Title";
 import { OPENINGS } from "@/utils/data";
 
@@ -14,7 +15,9 @@ const Location = () => {
           })
         )}
       </article>
-      <article className="location-map"></article>
+      <article className="location-map">
+        <MapBox />
+      </article>
     </section>
   );
 };

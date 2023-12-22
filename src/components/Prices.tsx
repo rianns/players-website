@@ -11,7 +11,7 @@ const Prices: React.FC<{ cuts: CutsType[] }> = ({
       {cuts.map((cut) => {
         return (
           <div key={cut.name} className="flexBetween">
-            <p>{cut.name}</p>
+            <p className="my-2">{cut.name}</p>
             <p>{cut.price}</p>
           </div>
         );
