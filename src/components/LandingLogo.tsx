@@ -5,14 +5,14 @@ import Button from "./styles/Button";
 
 const LandingLogo = () => {
   return (
-    <div className="mt-36">
+    <>
       <Image
         src={playersLogo}
-        alt={""}
-        width={560}
+        alt={"Players Hero Logo"}
+        width={480}
         // height={683}
       />
-    </div>
+    </>
   );
 };
 export default LandingLogo;

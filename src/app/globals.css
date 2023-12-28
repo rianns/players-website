@@ -35,8 +35,12 @@
   }
 
   .navbar-home {
-    @apply bg-transparent mt-36 text-white;
+    @apply bg-transparent mt-20 text-white;
     box-shadow: none;
+  }
+
+  .navbar-temp {
+    visibility: hidden;
   }
 
   .navlinks {
@@ -61,22 +65,22 @@
   .landing {
     @apply w-full bg-cover;
     background-image: url('/resources/images/bg-landing1.png');
-    height: calc(100vh - 9rem);
+    height: calc(100vh - 5rem);
     margin-top: -9rem;
   }
 
   /* About */
   .about-desc-container {
-    @apply p-16 bg-dark50 my-16 max-w-4xl rounded-lg;
+    @apply p-16 bg-dark50 my-10 max-w-4xl rounded-lg;
   }
 
   .about-bg {
-    @apply bg-cover my-16;
+    @apply bg-cover my-5;
     background-image: url('/resources/images/bg-about1.png');
   }
 
   .about {
-    @apply flex flex-col py-24;
+    @apply flex flex-col py-12;
   }
 
 
@@ -90,14 +94,14 @@
   }
 
   .services-prices {
-    @apply max-w-4xl w-4/5 py-8 text-xl grid grid-cols-1 gap-5;
+    @apply max-w-4xl w-4/5 py-8 text-lg grid grid-cols-1 gap-5;
   }
 
   /* Location */
 
   .location {
     @apply m-auto p-24  w-5/6 border border-red-500 flex flex-row;
-    height: calc(100vh - 24rem);
+    height: calc(100vh - 6rem);
   }
 
   .location-hours {
@@ -105,13 +109,26 @@
   }
 
   .location-hours-in {
-    @apply px-12 pr-40 text-3xl font-light;
+    @apply px-5 text-xl font-light;
   }
 
   .location-map {
     @apply h-full w-1/2 border border-green-500;
   }
+
+  /* TEMP - DEV PHASE */
+
+  .temp {
+    @apply p-24 text-white;
+    background-image: url('/resources/images/AdobeStock_303292479.jpeg');
+    background-size: cover;
+    background-color: rgba(255, 255, 255, 0.5);
+    margin-top: -6rem;
+    height: 100vh;
+  }
 }
+
+
 
 @layer utilities {
   .max-container {

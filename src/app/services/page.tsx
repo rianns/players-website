@@ -1,14 +1,14 @@
+"use client";
 import Service from "@/components/Service";
 import ServiceHeader from "@/components/ServiceHeader";
-import ServiceTitles from "@/components/ServiceHeader";
-import Paper from "@/components/styles/Paper";
 import { SERVICES } from "@/utils/data";
-
-const mappingServices = SERVICES.map((service) => service);
-
-const activeBtn = "";
+import { use, useState } from "react";
 
 const Services = () => {
+  const [activeBtn, setActiveBtn] = useState<boolean>(false); // sent to header and service
+  const [showService, setShowService] = useState<boolean>(true); // sent to service
+  const [hideService, setHideService] = useState<boolean>(true); // sent to service
+
   return (
     <section className="services flexCenter flex-col">
       <article className="services-headers">

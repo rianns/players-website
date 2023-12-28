@@ -9,7 +9,16 @@ const Nav: React.FC = () => {
   const pathname = usePathname();
 
   return (
-    <nav className={`flexEven ${pathname === "/" ? "navbar-home" : "navbar"}`}>
+    // <nav className={`flexEven ${pathname === "/" ? "navbar-home" : "navbar"}`}>
+    <nav
+      className={`flexEven ${
+        pathname === "/"
+          ? "navbar-home"
+          : pathname === "/temp"
+          ? "navbar-temp"
+          : "navbar"
+      }`}
+    >
       {NAV_LINKS.map((link) => (
         <Link href={link.href} key={link.key} className="navlinks">
           {link.label}

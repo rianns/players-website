@@ -12,7 +12,7 @@ const About = () => {
         <Title>About us</Title>
         <div className="about-bg flexCenter">
           <div className="about-desc-container">
-            <p className="text-center text-white text-3xl leading-relaxed font-thin">
+            <p className="text-center text-white text-2xl leading-relaxed font-thin">
               Players Men&apos;s Hair Stylists at Stockland Baldivis is a
               one-stop-shop for male grooming and hairstyling. The staff are
               experienced in both modern hair styling and traditional barbering

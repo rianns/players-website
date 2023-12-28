@@ -9,11 +9,12 @@ export const BarberName = styled.h2`
 export const BarberDesc = styled.p`
   width: 100%;
   text-align: justify;
+  overflow: scroll;
 `;
 
 const Barber = styled.div`
-  width: 360px;
-  height: 600px;
+  width: 280px;
+  height: 500px;
 `;
 
 export default Barber;

@@ -14,6 +14,7 @@ const config: Config = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
         // 'about-bg': "url('../../public/resources/images/bg-about.png')",
         // 'landing': "url('/resources/images/AdobeStock_218284763.jpeg')"
+        'temp': "url('/resources/images/AdobeStock_303292479.jpeg)",
       },
       // fontFamily: {
       //   title: ['var(--font-comforter)'],
@@ -37,6 +38,22 @@ const config: Config = {
         '5x1': '40px',
       },
     },
+    screens: {
+      'sm': '640px',
+      // => @media (min-width: 640px) { ... }
+
+      'md': '768px',
+      // => @media (min-width: 768px) { ... }
+
+      'lg': '1024px',
+      // => @media (min-width: 1024px) { ... }
+
+      'xl': '1280px',
+      // => @media (min-width: 1280px) { ... }
+
+      '2xl': '1536px',
+      // => @media (min-width: 1536px) { ... }
+    }
   },
   plugins: [],
 }

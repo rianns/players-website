@@ -18,7 +18,7 @@ const BarberCard = ({ name, image, background }: BarberProps) => {
         <Image
           src={image !== "" ? image : barberPH}
           alt={`Photo of ${name}`}
-          className="w-auto h-2/3"
+          className="w-auto"
         />
         <BarberName>{name}</BarberName>
         <BarberDesc>{background}</BarberDesc>

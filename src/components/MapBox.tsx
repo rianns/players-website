@@ -1,15 +1,14 @@
 import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
-import React, { forwardRef, useEffect, useRef, useState } from "react";
+import React, { useRef } from "react";
 
-const libraries = ["places"];
+interface GoogleMapProps {
+  apiKey: string;
+  center: { lat: number; lng: number };
+}
+
 const mapContainerStyle = {
   width: "100%",
   height: "100%",
-};
-
-const center = {
-  lat: -32.33278742369604,
-  lng: 115.81538774825357,
 };
 
 const options = {
@@ -17,26 +16,30 @@ const options = {
   zoomControl: true,
 };
 
-const MapBox = () => {
+const MapBox: React.FC<GoogleMapProps> = ({ apiKey, center }) => {
   const mapRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    if (mapRef.current) {
-      const script = document.createElement("script");
-      script.src = `https://maps.googleapis.com/maps/api/js?key=${
-        process.env.REACT_APP_GOOGLE_MAPS_API_KEY
-      }&libraries=${libraries.join(",")}`;
-      script.async = true;
-      script.onerror = () =>
-        console.error("Google Maps script failed to load.");
-      document.body.appendChild(script);
-    }
-  }, []);
+  // useEffect(() => {
+  //   const loadMap = async () => {
+  //     await LoadScript({
+  //       googleMapsApiKey: "AIzaSyBODvVfzUrn0NWFCA1dCJYsTYDC74SA2BE",
+  //       libraries,
+  //     });
+
+  //     if (isLoaded) {
+  //       const map = new window.google.maps.Map(mapRef.current, {
+  //         center: { center },
+  //         zoom: 15,
+  //       });
+  //     }
+  //   };
+  // }, []);
+
+  console.log(apiKey);
+  console.log(center);
 
   return (
-    <LoadScript
-      googleMapsApiKey={process.env.REACT_APP_GOOGLE_MAPS_API_KEY as string}
-    >
+    <LoadScript googleMapsApiKey={apiKey}>
       <GoogleMap
         mapContainerStyle={mapContainerStyle}
         center={center}
